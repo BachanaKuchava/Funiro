@@ -1,16 +1,14 @@
-import { useState } from 'react';
 import Header from './layout components/Header';
-import './App.css'
+import HomePage from './pages/homepage/HomePage';
+import './App.css';
 
 function App() {
-
-
-  return (
-    <>
-    <Header />
-     
-    </>
-  )
+    return (
+        <>
+            <Header />
+            <HomePage />
+        </>
+    );
 }
 
-export default App
+export default App;
