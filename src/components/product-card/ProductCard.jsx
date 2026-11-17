@@ -1,24 +1,30 @@
 import './productCard.scss';
 import productimg from '../../assets/images/productcardimg.png';
 
-function ProductCard() {
+function ProductCard({ product }) {
     return (
         <>
             <div className="productCard" tabIndex={0}>
 
                 <img
-                    src={productimg}
+                    src={product.thumbnails?.[0]?.[5] || product.thumbnails?.[0]?.[0]}
                     className="productCard-img"
-                    alt="Syltherine"
+                    alt={product.title}
                 />
 
                 <div className="productCard-info-block">
-                    <h2 className="product-title">Syltherine</h2>
+                    <h2 className="product-title">{product.title}</h2>
                     <p className="productCard-description">
-                        Stylish cafe chair
+                        {product.brand || 'Furniture'}
                     </p>
                     <p className="productCard-price">
-                        55₾ <span>75₾</span>
+                        ${product.price.toFixed(2)}
+
+                        {product.price_was > product.price && (
+                            <span>
+                                ${product.price_was.toFixed(2)}
+                            </span>
+                        )}
                     </p>
                 </div>
 
