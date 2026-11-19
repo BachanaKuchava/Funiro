@@ -40,7 +40,9 @@ function FilterBlock({ onApplyFilters, onSortChange }) {
     // RESET FILTERS
 
     const handleReset = () => {
-        setFilters({ ...initialFilters });
+        const clearedFilters = { ...initialFilters };
+        setFilters(clearedFilters);
+        onApplyFilters?.(clearedFilters);
     };
 
     // SEARCH BUTTON
