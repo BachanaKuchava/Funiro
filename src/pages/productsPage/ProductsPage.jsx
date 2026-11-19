@@ -1,11 +1,14 @@
-
-
+import HeroSection from './components/HeroSection';
+import FilterBlokc from './components/FilterBlock';
+import ProductsBlock from './components/ProductsBlock';
 
 
 function ProductsPage() {
     return (
         <div>
-            <h1>Products Page</h1>
+            <HeroSection />
+            <FilterBlokc />
+            <ProductsBlock />
         </div>
     );
 }

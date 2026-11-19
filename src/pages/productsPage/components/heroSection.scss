@@ -1,0 +1,72 @@
+.productsPage-HeroSection {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.productsPage-bannerBlock {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 316px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // BACKGROUND IMAGE WITH BLUR
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -5px;
+
+        background: url('../../../assets/images/shop-heroBanner.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        filter: blur(4px);
+        z-index: 0;
+    }
+
+    // KEEP TEXT ABOVE BLURRED BACKGROUND
+
+    h1 {
+        position: relative;
+        z-index: 1;
+
+        color: #000;
+        font-family: Poppins;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    p {
+        position: relative;
+        z-index: 1;
+
+        color: #000;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+}
+
+// .productsPage-banner {
+//     width: 100%;
+//     max-height: 316px;
+//     object-fit: cover;
+//     position: relative;
+// }
+
+// .productsPage-bannerBlock-text {
+//     position:absolute;
+//     left: 0;
+//     top: 50px;
+// }
